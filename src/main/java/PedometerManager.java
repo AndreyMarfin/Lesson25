@@ -11,11 +11,9 @@ public class PedometerManager {
         } else {
             int newValue = data.getOrDefault(day, 0) + steps;
             data.put(day, newValue);
-            for (int speed : data.keySet()){
                 if (max < newValue) {
                     max = newValue;
                 }
-            }
             return max + 1 - steps;
         }
     }
